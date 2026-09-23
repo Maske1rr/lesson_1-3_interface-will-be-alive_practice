@@ -6,10 +6,14 @@
 const firstCard = document.querySelector('[data-event="talk"]');
 const labStatus = document.querySelector("#lab-status");
 
-// 01. Уберите /* и */ вокруг обработчика, сохраните файл и нажмите
-// первую карточку. Потом переходите к заданию 02 в TASKS.md.
+// 01–02. Обработчик первой карточки: считаем нажатия и показываем их
+// в учебной подписи.
+const eventName = "Город в деталях";
+let clickCount = 0;
+
 firstCard.addEventListener("click", () => {
-  labStatus.textContent = "Открыта первая карточка";
+  clickCount = clickCount + 1;
+  labStatus.textContent = `${eventName}: нажатий ${clickCount}`;
 });
 
 // 02–03. Вы будете постепенно менять обработчик выше: добавите
