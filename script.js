@@ -1,16 +1,10 @@
 "use strict";
 
-// Семинар 1-3. Идите по заданиям 01–10 из TASKS.md.
-// Не вставляйте готовый код целиком: после каждого шага проверьте страницу.
-
 const firstCard = document.querySelector('[data-event="talk"]');
 const labStatus = document.querySelector("#lab-status");
 
-// 04. Заголовок панели подробностей: ищем его по id из index.html.
 const detailsTitle = document.querySelector("#details-title");
 
-// 01–04. Обработчик первой карточки: считаем нажатия, по условию
-// показываем подпись и меняем заголовок панели подробностей.
 const eventName = "Город в деталях";
 let clickCount = 0;
 
@@ -26,11 +20,11 @@ firstCard.addEventListener("click", () => {
   detailsTitle.textContent = eventName;
 });
 
-// 02–03. Вы будете постепенно менять обработчик выше: добавите
-// переменные, счетчик нажатий и условие. Не создавайте второй
-// обработчик для той же карточки, пока не разобрались с первым.
+const secondCard = document.querySelector('[data-event="workshop"]');
 
-// 04–05. Найдете элементы панели и подключите вторую карточку.
+secondCard.addEventListener("click", () => {
+  detailsTitle.textContent = "Мастерская постеров";
+});
 
 // 06. Сравните учебный массив с коллекцией карточек из DOM.
 
