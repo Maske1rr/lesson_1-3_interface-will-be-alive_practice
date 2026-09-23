@@ -25,8 +25,10 @@ const secondCard = document.querySelector('[data-event="workshop"]');
 secondCard.addEventListener("click", () => {
   detailsTitle.textContent = "Мастерская постеров";
 });
+const cards = document.querySelectorAll(".event-card");
+const eventCount = document.querySelector("#event-count");
 
-// 06. Сравните учебный массив с коллекцией карточек из DOM.
+eventCount.textContent = cards.length;
 
 // 07. Обойдете все карточки циклом. В этом месте временно могут
 // сосуществовать старые и новые обработчики; в задании 08 вы
