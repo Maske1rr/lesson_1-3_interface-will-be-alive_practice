@@ -6,14 +6,19 @@
 const firstCard = document.querySelector('[data-event="talk"]');
 const labStatus = document.querySelector("#lab-status");
 
-// 01–02. Обработчик первой карточки: считаем нажатия и показываем их
-// в учебной подписи.
+// 01–03. Обработчик первой карточки: считаем нажатия и по условию
+// показываем разные подписи для первого и повторного открытия.
 const eventName = "Город в деталях";
 let clickCount = 0;
 
 firstCard.addEventListener("click", () => {
   clickCount = clickCount + 1;
-  labStatus.textContent = `${eventName}: нажатий ${clickCount}`;
+
+  if (clickCount === 1) {
+    labStatus.textContent = `Первое открытие: ${eventName}`;
+  } else {
+    labStatus.textContent = `Повторное открытие: ${eventName}`;
+  }
 });
 
 // 02–03. Вы будете постепенно менять обработчик выше: добавите
