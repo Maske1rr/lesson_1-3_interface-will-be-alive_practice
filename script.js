@@ -35,4 +35,9 @@ cards.forEach((card) => {
   });
 });
 
-// 10. Самостоятельно оживите кнопку «Удиви меня».
+const surpriseButton = document.querySelector("#surprise-button");
+surpriseButton.addEventListener("click", () => {
+  const otherCards = Array.from(cards).filter((card) => card !== selectedCard);
+  const randomIndex = Math.floor(Math.random() * otherCards.length);
+  showEvent(otherCards[randomIndex]);
+});
