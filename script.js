@@ -6,8 +6,11 @@
 const firstCard = document.querySelector('[data-event="talk"]');
 const labStatus = document.querySelector("#lab-status");
 
-// 01–03. Обработчик первой карточки: считаем нажатия и по условию
-// показываем разные подписи для первого и повторного открытия.
+// 04. Заголовок панели подробностей: ищем его по id из index.html.
+const detailsTitle = document.querySelector("#details-title");
+
+// 01–04. Обработчик первой карточки: считаем нажатия, по условию
+// показываем подпись и меняем заголовок панели подробностей.
 const eventName = "Город в деталях";
 let clickCount = 0;
 
@@ -19,6 +22,8 @@ firstCard.addEventListener("click", () => {
   } else {
     labStatus.textContent = `Повторное открытие: ${eventName}`;
   }
+
+  detailsTitle.textContent = eventName;
 });
 
 // 02–03. Вы будете постепенно менять обработчик выше: добавите
