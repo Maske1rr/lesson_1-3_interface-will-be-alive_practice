@@ -30,9 +30,11 @@ const eventCount = document.querySelector("#event-count");
 
 eventCount.textContent = cards.length;
 
-// 07. Обойдете все карточки циклом. В этом месте временно могут
-// сосуществовать старые и новые обработчики; в задании 08 вы
-// удалите временные и оставите один общий путь обработки клика.
+cards.forEach((card) => {
+  card.addEventListener("click", () => {
+    labStatus.textContent = "Нажата карточка из программы";
+  });
+});
 
 // 08. Напишете функцию showEvent(card) и возьмете данные из HTML.
 
